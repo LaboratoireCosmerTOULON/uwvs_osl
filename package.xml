@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>uw_vs</name>
+  <name>uwvs_osl</name>
   <version>0.0.0</version>
-  <description>The uw_vs package</description>
+  <description>The uwvs_osl package</description>
 
   <maintainer email="matheus@todo.todo">matheus</maintainer>
 

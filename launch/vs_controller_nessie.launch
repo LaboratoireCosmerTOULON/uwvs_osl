@@ -4,7 +4,7 @@
 		<node name="dyn_interface" pkg="uw_vs" type="dyn_interface.py" />
 
  	<!-- start visual servoing -->
-		<node name="robot_cntrl_nessie" pkg="uw_vs" type="robot_cntrl_nessie" output="screen" />
+		<node name="robot_nessie" pkg="uwvs_osl" type="robot_nessie" output="screen" />
 	
 </launch>
 

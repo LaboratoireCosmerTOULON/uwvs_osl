@@ -22,7 +22,7 @@
 		<node name="dyn_interface" pkg="uw_vs" type="dyn_interface.py" />
 
  	<!-- start visual servoing -->
-		<node name="robot_visp" pkg="uw_vs" type="robot_visp" />
+		<node name="robot_visp" pkg="uwvs_osl" type="robot_visp" />
 	
 </launch>
 

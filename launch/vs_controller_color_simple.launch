@@ -4,7 +4,7 @@
 		<node name="dyn_interface" pkg="uw_vs" type="dyn_interface.py" />
 
  	<!-- start visual servoing -->
-		<node name="robot_cntrl_color_simple" pkg="uw_vs" type="robot_cntrl_color_simple" output="screen" />
+		<node name="robot_color_simple" pkg="uwvs_osl" type="robot_color_simple" output="screen" />
 	
 </launch>
 
