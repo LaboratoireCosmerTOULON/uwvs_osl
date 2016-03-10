@@ -1,0 +1,10 @@
+<launch>
+
+ 	<!-- start interface hydrodynamic simulation/UWSim -->
+		<node name="dyn_interface" pkg="uw_vs" type="dyn_interface.py" />
+
+ 	<!-- start visual servoing -->
+		<node name="robot_cntrl_color_simple" pkg="uw_vs" type="robot_cntrl_color_simple" output="screen" />
+	
+</launch>
+

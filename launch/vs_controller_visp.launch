@@ -1,0 +1,28 @@
+<launch>
+
+ 	<!-- start UWSim -->
+		<arg name="scene" default="/home/matheus/catkin_ws/UWSIM/scenes/nessie_redbox.xml" />
+		<node name="uwsim" pkg="uwsim" type="uwsim" args="--disableShaders --configfile $(arg scene)" output="screen" respawn="false" />
+
+ 	<!-- start hydrodynamic simulation -->
+		<!-- default args -->
+			<arg name="use_gui" default="false" />
+			<arg name="nav_verbose" default="false" />
+			<arg name="pilot_verbose" default="false" />
+			<arg name="ctrl_config" default="pid_sim.yaml" />
+		<!-- includes -->
+			<include file="$(find vehicle_core)/launch/nav_sim.launch">
+				<arg name="verbose" value="$(arg nav_verbose)"/>
+			</include>
+			<include file="$(find vehicle_core)/launch/pilot.launch">
+				<arg name="verbose" value="$(arg pilot_verbose)"/>
+				<arg name="ctrl_config" value="$(arg ctrl_config)" />
+			</include>
+ 	<!-- start interface hydrodynamic simulation/UWSim -->
+		<node name="dyn_interface" pkg="uw_vs" type="dyn_interface.py" />
+
+ 	<!-- start visual servoing -->
+		<node name="robot_visp" pkg="uw_vs" type="robot_visp" />
+	
+</launch>
+
